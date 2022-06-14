@@ -1,7 +1,7 @@
 # Docker/k8s learning project
 ## Mini web applications that display a picture of a cat
 
-##Docker commands:
+## Docker commands:
 1. docker build -t seidovsi/web:1.0.0 -t seidovsi/web:latest .  -- сборка docker image
 2. docker run -ti --rm -p 8000:8000 --name web seidovsi/web:1.0.0  -- запуск контейнера из созданного image, то есть запуск web-приложения
 3. docker push seidovsi/web:1.0.0 -- выгрузка image в Docker Hub
@@ -30,7 +30,9 @@
 
 6. $ kubectl port-forward pods/web 8000:8000  - выброс наружу web-приложения
 7. curl http://127.0.0.1:8000/ -проверка web-приложения
+
 ![5](https://user-images.githubusercontent.com/105795798/173576667-5040e7b0-d777-4592-a6b7-d716ac6a9fe8.png)
+
 8. $ kubectl logs web -n default -  логи внутри docker container Pod
 
 ![6](https://user-images.githubusercontent.com/105795798/173576753-19524c74-a284-4dd6-ba0f-f63920161d73.png)
